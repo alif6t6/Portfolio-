@@ -31,7 +31,7 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between relative z-50">
         <a href="#" className="text-2xl font-black tracking-tight text-white flex items-center gap-2 group">
-          <img src={personalInfo.profileImage} alt="Logo" className="w-8 h-8 rounded-lg object-cover border border-white/10" referrerPolicy="no-referrer" />
+          <img src={personalInfo.profileImage} alt="Logo" className="w-8 h-8 rounded-lg object-cover border border-white/10" referrerPolicy="no-referrer" fetchPriority="high" loading="eager" decoding="sync" />
           <span className="group-hover:text-[#22D3EE] transition-colors uppercase tracking-wider text-xl">HRIDOY SHIKDER</span>
         </a>
 

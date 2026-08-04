@@ -42,8 +42,9 @@ export function Projects() {
                     <img 
                       src={project.image} 
                       alt={project.title} 
-                      className="w-full h-full object-cover object-top transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-700 ease-out"
+                      className="w-full h-full object-cover object-top transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-700 ease-out will-change-transform"
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>

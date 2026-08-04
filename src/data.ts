@@ -44,7 +44,7 @@ export const services = [
     icon: LayoutTemplate
   },
   {
-    title: "Normal E-commerce Website",
+    title: "E-Commerce Website",
     description: "Responsive shopping interface with clean product layout and modern user experience.",
     icon: ShoppingCart
   }

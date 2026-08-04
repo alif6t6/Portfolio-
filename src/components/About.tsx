@@ -7,7 +7,7 @@ export function About() {
     { name: 'Responsive Development', icon: MonitorSmartphone },
     { name: 'Clean Code', icon: Code },
     { name: 'Performance Optimization', icon: Zap },
-    { name: 'User Experience (UX)', icon: Users },
+    { name: 'User Experience', icon: Users },
     { name: 'Professional Communication', icon: MessageSquare },
   ];
 

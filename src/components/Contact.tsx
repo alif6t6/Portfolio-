@@ -51,8 +51,10 @@ export function Contact() {
                 <img 
                   src={personalInfo.profileImage} 
                   alt={personalInfo.name} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
-                  referrerPolicy="no-referrer" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 will-change-transform" 
+                  referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async" 
                 />
              </motion.div>
           </div>

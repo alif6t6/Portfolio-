@@ -62,12 +62,12 @@ export function Hero() {
 
         {/* Visuals */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1, y: [0, -10, 0] }}
           transition={{ 
-            opacity: { duration: 0.8, delay: 0.2 },
-            scale: { duration: 0.8, delay: 0.2 },
-            y: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }
+            opacity: { duration: 0.6, delay: 0.1, ease: "easeOut" },
+            scale: { duration: 0.6, delay: 0.1, type: "spring", stiffness: 100 },
+            y: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }
           }}
           className="flex-1 relative flex items-center justify-center w-full transform-gpu"
         >
@@ -81,8 +81,11 @@ export function Hero() {
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   src={personalInfo.profileImage}
                   alt={personalInfo.name}
-                  className="w-[92%] h-[92%] object-cover rounded-full shadow-2xl ring-8 ring-[#0b0f19] relative z-10 transform-gpu"
+                  className="w-[92%] h-[92%] object-cover rounded-full shadow-2xl ring-8 ring-[#0b0f19] relative z-10 transform-gpu will-change-transform"
                   referrerPolicy="no-referrer"
+                  fetchPriority="high"
+                  loading="eager"
+                  decoding="sync"
                 />
             </div>
           </div>
