@@ -34,7 +34,8 @@ export function Skills() {
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center group cursor-pointer hover:-translate-y-1 hover:scale-[1.02] transition-transform duration-300"
+              tabIndex={0}
+              className="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center group cursor-pointer card-hover-3d interactive-ripple outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE]"
             >
               <div className="w-14 h-14 rounded-full bg-slate-800/50 flex items-center justify-center mb-4 group-hover:bg-[#22D3EE]/20 group-hover:text-[#22D3EE] text-slate-300 transition-colors">
                 <skill.icon size={28} strokeWidth={1.5} />

@@ -55,7 +55,7 @@ export const projects = [
     title: "Personal Portfolio Website",
     category: "Portfolio",
     description: "Modern responsive portfolio showcasing clean UI and smooth interactions.",
-    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=2340&ixlib=rb-4.0.3",
+    image: "https://imghippo.nexpoint.click/6901246836/AgACAgUAAyEFAATk6e-_AAIL32pyTbbQde6PzbgpPnR2atqBIL5qAAIJD2sb9sSZVzH8U-r4pOlhAQADAgADdwADPQQ.jpg",
     liveUrl: "#",
     githubUrl: "#"
   },
@@ -63,7 +63,7 @@ export const projects = [
     title: "Business Website",
     category: "Business",
     description: "Professional website for local businesses with responsive layout and modern design.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426&ixlib=rb-4.0.3",
+    image: "https://imghippo.nexpoint.click/7029262785/AgACAgUAAyEFAATk6e-_AAIL4mpyTpVK4TvJseLnojqBEj0Pxd_vAAIKD2sb9sSZV1sxZA-uJ4NbAQADAgADdwADPQQ.jpg",
     liveUrl: "#",
     githubUrl: "#"
   },
@@ -71,7 +71,7 @@ export const projects = [
     title: "Landing Page",
     category: "Marketing",
     description: "High-converting landing page optimized for user engagement.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2370&ixlib=rb-4.0.3",
+    image: "https://imghippo.nexpoint.click/8380554971/AgACAgUAAyEFAATk6e-_AAIL5GpyTp5HG0WHa28nl1nDNhKUxL-gAAILD2sb9sSZV-Pe27_wXA0cAQADAgADdwADPQQ.jpg",
     liveUrl: "#",
     githubUrl: "#"
   },
@@ -79,7 +79,7 @@ export const projects = [
     title: "E-commerce Website",
     category: "Online Store",
     description: "Responsive shopping interface with clean product layout and modern user experience.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=2370&ixlib=rb-4.0.3",
+    image: "https://imghippo.nexpoint.click/8336580696/AgACAgUAAyEFAATk6e-_AAIL6GpyTq9NWtO5b3tfjjHxyLOh8qFsAAIMD2sb9sSZV9a-WtVMMg0QAQADAgADdwADPQQ.jpg",
     liveUrl: "#",
     githubUrl: "#"
   }

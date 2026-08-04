@@ -46,14 +46,14 @@ export function Hero() {
           >
             <a
               href="#contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg shadow-lg shadow-blue-500/25 hover:scale-[1.02] transition-transform flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2 group interactive-ripple premium-hover outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b0f19]"
             >
               Start a Project
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#services"
-              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/5 border border-white/10 text-white font-bold text-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2 backdrop-blur-sm"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/5 border border-white/10 text-white font-bold text-lg flex items-center justify-center gap-2 backdrop-blur-sm interactive-ripple premium-hover outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b0f19]"
             >
               View Services
             </a>
@@ -81,11 +81,13 @@ export function Hero() {
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   src={personalInfo.profileImage}
                   alt={personalInfo.name}
-                  className="w-[92%] h-[92%] object-cover rounded-full shadow-2xl ring-8 ring-[#0b0f19] relative z-10 transform-gpu will-change-transform"
+                  className="w-[92%] h-[92%] object-cover rounded-full shadow-2xl ring-8 ring-[#0b0f19] relative z-10 transform-gpu will-change-transform transition-opacity duration-700"
                   referrerPolicy="no-referrer"
                   fetchPriority="high"
                   loading="eager"
                   decoding="sync"
+                  style={{ opacity: 0 }}
+                  onLoad={(e) => { e.currentTarget.style.opacity = '1'; }}
                 />
             </div>
           </div>

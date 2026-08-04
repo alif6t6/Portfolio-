@@ -36,15 +36,18 @@ export function Projects() {
                 className={`flex flex-col ${index % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-6 md:gap-12 lg:gap-16 items-center mb-16`}
               >
                 {/* Image Showcase */}
-                <div className="w-full lg:w-3/5 group relative rounded-3xl overflow-hidden glass-panel p-2">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-[#22D3EE]/20 to-[#6D28D9]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 rounded-3xl mix-blend-overlay"></div>
-                  <div className="relative rounded-2xl overflow-hidden bg-slate-900 aspect-[16/9]">
+                <div className="w-full lg:w-3/5 group relative rounded-[2rem] overflow-hidden glass-panel p-2 shadow-xl shadow-black/20 card-hover-3d interactive-ripple cursor-pointer">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#22D3EE]/20 to-[#6D28D9]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 mix-blend-overlay pointer-events-none rounded-[2rem]"></div>
+                  <div className="relative rounded-3xl overflow-hidden bg-slate-900 aspect-[16/9] ring-1 ring-white/10">
                     <img 
                       src={project.image} 
                       alt={project.title} 
-                      className="w-full h-full object-cover object-top transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-700 ease-out will-change-transform"
+                      className="w-full h-full object-contain transform group-hover:scale-[1.03] transition-all duration-700 ease-out will-change-transform bg-slate-900"
                       loading="lazy"
                       decoding="async"
+                      fetchPriority="low"
+                      style={{ opacity: 0 }}
+                      onLoad={(e) => { e.currentTarget.style.opacity = '1'; }}
                     />
                   </div>
                 </div>

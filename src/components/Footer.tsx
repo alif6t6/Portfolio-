@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="py-12 border-t border-white/5 bg-[#0b0f19]">
       <div className="max-w-4xl mx-auto px-6 md:px-12 flex flex-col items-center text-center">
-        <a href="#" className="text-2xl font-black tracking-tight text-white mb-2 font-['Urbanist',sans-serif]">
+        <a href="#" aria-label="Back to Top" className="text-2xl font-black tracking-tight text-white mb-2 font-['Urbanist',sans-serif] interactive-ripple p-2 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE]">
           {personalInfo.name}
         </a>
         

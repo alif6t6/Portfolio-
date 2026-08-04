@@ -37,7 +37,10 @@ export function ProcessAndStack() {
                   key={step.title}
                   className="flex flex-col items-center text-center"
                 >
-                  <div className="w-14 h-14 rounded-2xl glass-card flex items-center justify-center mb-4 text-cyan-400 border border-slate-700/50 relative group hover:border-blue-500/50 hover:scale-105 transition-all bg-[#0f172a]">
+                  <div 
+                    tabIndex={0}
+                    className="w-14 h-14 rounded-2xl glass-card flex items-center justify-center mb-4 text-cyan-400 border border-slate-700/50 relative group hover:border-blue-500/50 hover:scale-105 transition-all bg-[#0f172a] interactive-ripple cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE]"
+                  >
                     <step.icon size={20} />
                     <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-blue-600 border border-slate-800 flex items-center justify-center text-[9px] font-bold text-white shadow-lg">
                       {step.step}
@@ -81,7 +84,8 @@ export function ProcessAndStack() {
             {stack.map((item) => (
               <div
                 key={item.name}
-                className="flex items-center gap-3 glass-card px-6 py-4 rounded-xl hover:-translate-y-1 transition-transform border border-slate-800 hover:border-slate-600"
+                tabIndex={0}
+                className="flex items-center gap-3 glass-card px-6 py-4 rounded-xl card-hover-3d interactive-ripple border border-slate-800 hover:border-slate-600 cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE]"
               >
                 <item.icon size={20} className="text-cyan-400" />
                 <span className="text-slate-200 font-semibold">{item.name}</span>

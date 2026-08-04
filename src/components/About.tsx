@@ -48,7 +48,7 @@ export function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="glass-card p-8 md:p-10 rounded-3xl"
+              className="glass-card p-8 md:p-10 rounded-3xl card-hover-3d interactive-ripple"
             >
               <h3 className="text-xl font-bold text-white mb-8 font-['Urbanist',sans-serif]">Core Focus</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">

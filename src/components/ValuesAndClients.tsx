@@ -28,7 +28,8 @@ export function ValuesAndClients() {
             {values.map((value) => (
               <div
                 key={value.name}
-                className="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center group hover:scale-[1.02] transition-transform duration-300 border border-slate-800 hover:border-slate-600"
+                tabIndex={0}
+                className="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center group card-hover-3d interactive-ripple border border-slate-800 hover:border-slate-600 outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE]"
               >
                 <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mb-4 text-cyan-400 group-hover:bg-cyan-400/10 transition-colors">
                   <value.icon size={20} />
@@ -52,7 +53,8 @@ export function ValuesAndClients() {
               {clients.map((client) => (
                 <div
                   key={client.name}
-                  className="glass-panel px-4 py-2 rounded-full flex items-center gap-2 border border-slate-700/50 hover:border-cyan-500/30 transition-colors bg-[#0f172a]"
+                  tabIndex={0}
+                  className="glass-panel px-4 py-2 rounded-full flex items-center gap-2 border border-slate-700/50 hover:border-cyan-500/30 transition-colors bg-[#0f172a] interactive-ripple premium-hover outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE]"
                 >
                   <client.icon size={16} className="text-cyan-400" />
                   <span className="text-slate-200 text-sm font-medium">{client.name}</span>

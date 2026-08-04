@@ -31,11 +31,12 @@ export function Services() {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
+              tabIndex={0}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="glass-card p-8 md:p-10 rounded-3xl relative overflow-hidden group hover:border-[#22D3EE]/30"
+              className="glass-card p-8 md:p-10 rounded-3xl relative overflow-hidden group card-hover-3d interactive-ripple hover:border-[#22D3EE]/30 outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE]"
             >
               {/* Gradient glow effect on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#22D3EE]/0 via-[#6D28D9]/0 to-[#22D3EE]/0 group-hover:from-[#22D3EE]/10 group-hover:via-[#6D28D9]/5 group-hover:to-[#22D3EE]/10 transition-all duration-500 pointer-events-none" />
