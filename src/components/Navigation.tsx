@@ -1,0 +1,102 @@
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Menu, X } from 'lucide-react';
+import { personalInfo } from '../data';
+
+const navLinks = [
+  { name: 'About', href: '#about' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'Services', href: '#services' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Contact', href: '#contact' },
+];
+
+export function Navigation() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled || mobileMenuOpen ? 'py-4 bg-[#0b0f19]/80 backdrop-blur-2xl border-b border-white/10 shadow-lg' : 'py-6 bg-transparent'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between relative z-50">
+        <a href="#" className="text-2xl font-black tracking-tight text-white flex items-center gap-2 group">
+          <img src={personalInfo.profileImage} alt="Logo" className="w-8 h-8 rounded-lg object-cover border border-white/10" referrerPolicy="no-referrer" />
+          <span className="group-hover:text-[#22D3EE] transition-colors uppercase tracking-wider text-xl">HRIDOY SHIKDER</span>
+        </a>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group"
+            >
+              {link.name}
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#22D3EE] transition-all duration-300 group-hover:w-full rounded-full"></span>
+            </a>
+          ))}
+          <a
+            href="#contact"
+            className="ml-4 px-5 py-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white text-sm font-semibold transition-all hover:border-[#22D3EE]/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)]"
+          >
+            Hire Me
+          </a>
+        </nav>
+
+        {/* Mobile Menu Toggle */}
+        <button
+          className="md:hidden text-white p-2"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Nav */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <>
+            {/* Full-screen backdrop blur overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMobileMenuOpen(false)}
+              className="fixed inset-0 bg-[#0b0f19]/70 backdrop-blur-xl z-40 md:hidden"
+            />
+            {/* Mobile Menu Content */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="absolute top-full left-0 right-0 p-6 flex flex-col gap-4 md:hidden shadow-2xl z-50 bg-[#0b0f19]/80 backdrop-blur-3xl border-b border-white/10"
+            >
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-xl font-bold text-white hover:text-cyan-400 py-4 border-b border-white/10 transition-colors text-center font-['Urbanist',sans-serif] tracking-wide"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}
