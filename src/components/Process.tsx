@@ -10,10 +10,11 @@ export function ProcessAndStack() {
         <div className="mb-32">
           <div className="text-center mb-16">
             <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-bold text-white mb-6 font-['Urbanist',sans-serif]"
+              initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-3xl md:text-5xl font-bold text-white mb-6 font-['Urbanist',sans-serif] will-change-[opacity,transform,filter]"
             >
               Working <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Process</span>
             </motion.h2>
@@ -23,10 +24,11 @@ export function ProcessAndStack() {
           </div>
 
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="relative"
+            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+            className="relative will-change-[opacity,transform,filter]"
           >
             {/* Connecting line */}
             <div className="hidden lg:block absolute top-1/2 left-0 w-full h-[2px] bg-slate-800 -translate-y-1/2 z-0"></div>
@@ -57,29 +59,31 @@ export function ProcessAndStack() {
         <div>
           <div className="text-center mb-12">
             <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-2xl md:text-4xl font-bold text-white mb-6 font-['Urbanist',sans-serif]"
+              initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-2xl md:text-4xl font-bold text-white mb-6 font-['Urbanist',sans-serif] will-change-[opacity,transform,filter]"
             >
               Development Stack
             </motion.h2>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-slate-400 max-w-2xl mx-auto font-medium"
+              initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+              className="text-slate-400 max-w-2xl mx-auto font-medium will-change-[opacity,transform,filter]"
             >
               Technologies I use to build fast, responsive, modern, and user-friendly websites with clean code and optimized performance.
             </motion.p>
           </div>
           
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-4 md:gap-6"
+            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="flex flex-wrap justify-center gap-4 md:gap-6 will-change-[opacity,transform,filter]"
           >
             {stack.map((item) => (
               <div

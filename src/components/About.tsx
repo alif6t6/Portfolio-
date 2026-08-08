@@ -19,10 +19,11 @@ export function About() {
           {/* Left: Text Content */}
           <div className="flex-1">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="will-change-[opacity,transform,filter]"
             >
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-['Urbanist',sans-serif]">
                 About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Me</span>
@@ -44,11 +45,11 @@ export function About() {
           {/* Right: Visual/Stats */}
           <div className="flex-1 w-full">
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="glass-card p-8 md:p-10 rounded-3xl card-hover-3d interactive-ripple"
+              initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="glass-card p-8 md:p-10 rounded-3xl card-hover-3d interactive-ripple will-change-[opacity,transform,filter]"
             >
               <h3 className="text-xl font-bold text-white mb-8 font-['Urbanist',sans-serif]">Core Focus</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">

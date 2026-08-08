@@ -7,19 +7,20 @@ export function Projects() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-12 md:mb-16">
             <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-bold text-white mb-6 font-['Urbanist',sans-serif]"
+              initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-3xl md:text-5xl font-bold text-white mb-6 font-['Urbanist',sans-serif] will-change-[opacity,transform,filter]"
             >
               Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Projects</span>
             </motion.h2>
             <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-slate-400 max-w-2xl mx-auto font-['Inter',sans-serif] text-lg"
+              initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+              className="text-slate-400 max-w-2xl mx-auto font-['Inter',sans-serif] text-lg will-change-[opacity,transform,filter]"
             >
               A selection of premium web experiences crafted with attention to detail.
             </motion.p>
@@ -29,11 +30,11 @@ export function Projects() {
             {projects.map((project, index) => (
               <motion.div 
                 key={project.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.7 }}
-                className={`flex flex-col ${index % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-6 md:gap-12 lg:gap-16 items-center mb-16`}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className={`flex flex-col ${index % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-6 md:gap-12 lg:gap-16 items-center mb-16 will-change-[opacity,transform,filter]`}
               >
                 {/* Image Showcase */}
                 <div className="w-full lg:w-3/5 group relative rounded-[2rem] overflow-hidden glass-panel p-2 shadow-xl shadow-black/20 card-hover-3d interactive-ripple cursor-pointer">

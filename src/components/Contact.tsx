@@ -16,30 +16,31 @@ export function Contact() {
     <section id="contact" className="py-24 relative bg-slate-900/40">
       <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-bold text-white mb-4"
+          initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-3xl md:text-5xl font-bold text-white mb-4 will-change-[opacity,transform,filter]"
         >
           Let's Work <span className="text-gradient">Together</span>
         </motion.h2>
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="text-slate-400 mb-12"
+          initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+          className="text-slate-400 mb-12 will-change-[opacity,transform,filter]"
         >
           Ready to create something extraordinary? Get in touch and let's
           discuss your project.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden"
+          initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden will-change-[opacity,transform,filter]"
         >
           {/* Profile Photo in Contact */}
           <div className="flex justify-center mb-10">

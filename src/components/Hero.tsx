@@ -11,38 +11,38 @@ export function Hero() {
         {/* Text Content */}
         <div className="flex-1 text-center lg:text-left mt-8 lg:mt-0">
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-2 tracking-tight font-['Urbanist',sans-serif]"
+            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+            className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-2 tracking-tight font-['Urbanist',sans-serif] will-change-[opacity,transform,filter]"
           >
             <span className="text-2xl md:text-3xl font-medium text-slate-300 block mb-2 font-mono">Hi, I'm</span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-sm">{personalInfo.name.toUpperCase()}</span>
           </motion.h1>
 
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl lg:text-2xl font-bold tracking-widest uppercase mb-6 font-['Urbanist',sans-serif] text-transparent bg-clip-text bg-[linear-gradient(to_right,#ef4444,#f97316,#f59e0b,#10b981,#3b82f6,#6366f1,#8b5cf6)]"
+            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-lg md:text-xl lg:text-2xl font-bold tracking-widest uppercase mb-6 font-['Urbanist',sans-serif] text-transparent bg-clip-text bg-[linear-gradient(to_right,#ef4444,#f97316,#f59e0b,#10b981,#3b82f6,#6366f1,#8b5cf6)] will-change-[opacity,transform,filter]"
           >
             {personalInfo.title}
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed font-['Inter',sans-serif]"
+            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed font-['Inter',sans-serif] will-change-[opacity,transform,filter]"
           >
             {personalInfo.intro}
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
+            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 will-change-[opacity,transform,filter]"
           >
             <a
               href="#contact"
@@ -62,14 +62,15 @@ export function Hero() {
 
         {/* Visuals */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1, y: [0, -10, 0] }}
+          initial={{ opacity: 0, scale: 0.85, filter: "blur(15px)" }}
+          animate={{ opacity: 1, scale: 1, filter: "blur(0px)", y: [0, -10, 0] }}
           transition={{ 
-            opacity: { duration: 0.6, delay: 0.1, ease: "easeOut" },
-            scale: { duration: 0.6, delay: 0.1, type: "spring", stiffness: 100 },
-            y: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }
+            opacity: { duration: 0.8, delay: 0.1, ease: "easeOut" },
+            scale: { duration: 0.8, delay: 0.1, type: "spring", stiffness: 80 },
+            filter: { duration: 0.8, delay: 0.1, ease: "easeOut" },
+            y: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.9 }
           }}
-          className="flex-1 relative flex items-center justify-center w-full transform-gpu"
+          className="flex-1 relative flex items-center justify-center w-full transform-gpu will-change-[opacity,transform,filter]"
         >
           <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[480px] lg:h-[480px]">
             {/* Professional Borders & Rings */}

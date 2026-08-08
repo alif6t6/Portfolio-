@@ -10,20 +10,22 @@ export function ValuesAndClients() {
         <div className="mb-32">
           <div className="text-center mb-16">
             <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-bold text-white mb-4 font-['Urbanist',sans-serif]"
+              initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-3xl md:text-5xl font-bold text-white mb-4 font-['Urbanist',sans-serif] will-change-[opacity,transform,filter]"
             >
               Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Values</span>
             </motion.h2>
           </div>
           
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6"
+            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 will-change-[opacity,transform,filter]"
           >
             {values.map((value) => (
               <div
@@ -44,9 +46,11 @@ export function ValuesAndClients() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, x: -30, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="will-change-[opacity,transform,filter]"
           >
             <h3 className="text-2xl font-bold text-white mb-8 font-['Urbanist',sans-serif]">Target Clients</h3>
             <div className="flex flex-wrap gap-3">
@@ -64,10 +68,11 @@ export function ValuesAndClients() {
           </motion.div>
 
           <motion.div 
-             initial={{ opacity: 0, x: 20 }}
-             whileInView={{ opacity: 1, x: 0 }}
-             viewport={{ once: true }}
-             className="glass-card p-8 rounded-3xl border border-[#22D3EE]/20 relative overflow-hidden"
+             initial={{ opacity: 0, x: 30, filter: "blur(10px)" }}
+             whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+             viewport={{ once: true, margin: "-100px" }}
+             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+             className="glass-card p-8 rounded-3xl border border-[#22D3EE]/20 relative overflow-hidden will-change-[opacity,transform,filter]"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#22D3EE]/10 blur-[50px]"></div>
             
