@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { personalInfo } from "../data";
-import { Mail, Send, Copy, CheckCircle2, MessageCircle } from "lucide-react";
+import { Mail, Send, Copy, CheckCircle2, MessageCircle, Instagram } from "lucide-react";
 import { useState } from "react";
 
 export function Contact() {
@@ -62,7 +62,7 @@ export function Contact() {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <a
               href={`mailto:${personalInfo.email}`}
               className="flex items-center justify-center gap-2 py-4 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold interactive-ripple premium-hover outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b0f19]"
@@ -90,6 +90,18 @@ export function Contact() {
               <Send size={18} />
               Telegram
             </a>
+
+            {personalInfo.instagram && (
+              <a
+                href={personalInfo.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 py-4 rounded-2xl bg-[#E1306C]/10 text-[#E1306C] font-bold interactive-ripple premium-hover border border-[#E1306C]/20 outline-none focus-visible:ring-2 focus-visible:ring-[#E1306C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b0f19]"
+              >
+                <Instagram size={18} />
+                Instagram
+              </a>
+            )}
           </div>
 
           <p className="mt-8 text-sm text-slate-400 font-medium">

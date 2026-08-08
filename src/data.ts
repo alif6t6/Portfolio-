@@ -6,6 +6,7 @@ export const personalInfo = {
   email: "mdalifshikderhridoy1@gmail.com",
   telegram: "@HRIDOY_SHIKDER30",
   whatsapp: "+8801328973952",
+  instagram: "https://www.instagram.com/hridoy.shikder30?igsh=c3Q4MjdpNTB6",
   profileImage: "https://drive.google.com/thumbnail?id=1nnthPhdDCdc0IutwM0Tva6wa7XOYJpgn&sz=w1000",
   intro: "I design and develop modern, responsive websites focused on performance, usability, and clean user experiences. My goal is to create fast, visually appealing, and user-friendly websites that help businesses and personal brands establish a strong online presence.",
 };
