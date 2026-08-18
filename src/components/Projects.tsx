@@ -43,7 +43,7 @@ export function Projects() {
                     <img 
                       src={project.image} 
                       alt={project.title} 
-                      className="w-full h-full object-contain transform group-hover:scale-[1.03] transition-all duration-700 ease-out will-change-transform bg-slate-900"
+                      className="w-full h-full object-cover transform group-hover:scale-[1.03] transition-all duration-700 ease-out will-change-transform bg-slate-900"
                       loading="lazy"
                       decoding="async"
                       fetchPriority="low"
